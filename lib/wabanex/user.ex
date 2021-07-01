@@ -1,10 +1,11 @@
 defmodule Wabanex.User do
-use Ecto.Schema
-import Ecto.Changeset
+  use Ecto.Schema
+  import Ecto.Changeset
 
-@primary_key {:id, :binary_id, autogenerate: true}
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @fields [:email, :password, :name]
 
-schema "users" do
+  schema "users" do
   field :email, :string
   field :name, :string
   field :password, :string
